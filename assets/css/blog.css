@@ -1,50 +1,40 @@
 main {
-    margin-top: 20px;
+    padding-inline: var(--spacing-2);
+    padding-block-end: var(--spacing-2);
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    justify-content: center;
 }
 
-/* #back {
-    position: absolute;
-    display: inline;
-    margin-right: 20px;
-    right: 50px;
-    font-size: 2rem;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    color: var(--text-color);
-}
-
-#back:hover {
-    color: var(--bg-color);
-} */
-
+/*-----------------------------------*\
+#BLOGS
+\*-----------------------------------*/
 .blogs {
     position: relative;
 }
 
 .blog-entry {
     background-color: var(--surface);
-    padding: var(--spacing-4);
-    margin-block: var(--spacing-4);
+    padding: var(--spacing-2);
+    margin-block: var(--spacing-2);
     border: 1px solid var(--outline-variant);
     border-radius: var(--radius-large);
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    --state-layer-bg: var(--on-surface);
-    transition: border-color var(--tr-duration-short) var(--tr-easing-linear);
+    --state-layer-bg: var(--second-surface);
+    transition: border-color var(--tr-short) var(--tr-linear);
 }
 
 .blog-entry:where(:hover, :focus-visible) { border-color: var(--outline); }
-
-
 
 /* Additional styling for blog entry content */
 .blog-entry h3,
 .blog-entry p,
 .blog-entry .author {
-    color: var(--on-surface-variant);
-    margin-block: var(--spacing-4);
+    color: var(--second-surface-variant);
+    margin-block: var(--spacing-2);
     text-wrap: balance;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -66,18 +56,16 @@ main {
 
 .blog-entry .icon-btn {
     opacity: 0;
-    transition: opacity var(--tr-duration-short) var(--tr-easing-linear);
+    transition: opacity var(--tr-short) var(--tr-linear);
 }
   
 .blog-entry:where(:hover, :focus-visible) .icon-btn {
     opacity: 1;
 }
 
-/**
- * Modal
- */
-
- /* Style for the modal */
+/*-----------------------------------*\
+#MODAL
+\*-----------------------------------*/
  .modal {
     display: none;
     position: fixed;
@@ -85,20 +73,18 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 560px;
-    width: calc(100% - var(--spacing-8));
-    background-color: var(--surface-container-highest);
+    width: calc(100% - var(--spacing-5));
+    background-color: var(---surface-container);
     border-radius: var(--radius-large);
-    padding: var(--spacing-6);
-    box-shadow: var(--shadow-3);
+    padding: var(--spacing-4);
+    box-shadow: var(--shadow-2);
     z-index: 8;
-    animation: modal-open var(--tr-duration-medium) var(--tr-easing-emphasized) forwards;
+    animation: modal-open var(--tr-medium) var(--tr-emphasized) forwards;
   }
-
-
 
 @keyframes modal-open {
     0% {
-      transform: translate(-50%, calc(-50% + var(--spacing-5)));
+      transform: translate(-50%, calc(-50% + var(--spacing-3)));
       opacity: 0;
       visibility: hidden;
     }
@@ -112,26 +98,26 @@ main {
 
 .modal .icon-btn {
     position: absolute;
-    top: var(--spacing-4);
-    right: var(--spacing-4);
+    top: var(--spacing-2);
+    right: var(--spacing-2);
 }
 
 .btn.text {
     color: var(--primary);
     --state-layer-bg: var(--primary);
-    padding-inline: var(--spacing-4);
+    padding-inline: var(--spacing-2);
   }
   
-.btn.text:disabled { color: var(--on-surface); }
+.btn.text:disabled { color: var(--second-surface); }
   
 .btn.text:disabled .text-label-large { opacity: 0.38; }
   
 .btn.fill {
     background-color: var(--primary);
-    color: var(--on-primary);
-    --state-layer-bg: var(--on-primary);
-    padding-inline: var(--spacing-6);
-    transition: box-shadow var(--tr-duration-short) var(--tr-easing-linear);
+    color: var(--second-primary);
+    --state-layer-bg: var(--second-primary);
+    padding-inline: var(--spacing-4);
+    transition: box-shadow var(--tr-short) var(--tr-linear);
 }
   
 .btn.fill:hover:not(:focus) { box-shadow: var(--shadow-1); }
@@ -139,7 +125,7 @@ main {
 
 /* Modal content */
 .modal-content {
-    background-color: var(--surface-container-highest);
+    background-color: var(---surface-container);
     margin: 0 auto;
     padding: 10px;
     border: 1px solid #888;
@@ -151,11 +137,11 @@ main {
 .modal-content textarea {
     min-height: 240px;
     max-height: calc(100vh - 200px);
-    color: var(--on-surface-variant);
+    color: var(--second-surface-variant);
     overflow-y: auto;
-    margin-block-end: var(--spacing-4);
-    font-size: var(--fs-body-large);
-    line-height: var(--lh-body-large);
+    margin-block-end: var(--spacing-2);
+    font-size: var(--fs-large);
+    line-height: var(--lh-large);
     font-weight: var(--fw-regular);
     letter-spacing: var(--ls-p-025);
 }
@@ -163,11 +149,11 @@ main {
 .modal-content input[type="text"] {
     padding-left: 0;
     max-height: 48px;
-    color: var(--on-surface-variant);
+    color: var(--second-surface-variant);
     overflow-y: auto;
-    margin-block-end: var(--spacing-4);
-    font-size: var(--fs-body-large);
-    line-height: var(--lh-body-large);
+    margin-block-end: var(--spacing-2);
+    font-size: var(--fs-large);
+    line-height: var(--lh-large);
     font-weight: var(--fw-regular);
     letter-spacing: var(--ls-p-025);
 }
@@ -176,13 +162,13 @@ main {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: var(--spacing-2);
-    padding-block-start: var(--spacing-2);
+    gap: var(--spacing-1);
+    padding-block-start: var(--spacing-1);
   }
   
 .modal-footer .time {
     flex-grow: 1;
-    color: var(--on-surface-variant);
+    color: var(--second-surface-variant);
 }
 
 
