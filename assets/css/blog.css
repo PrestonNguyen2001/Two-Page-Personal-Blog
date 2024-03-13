@@ -1,0 +1,87 @@
+main {
+    margin-top: 20px;
+}
+
+.blogs {
+    position: relative;
+}
+
+.blog-entry {
+    background-color: var(--surface);
+    padding: var(--spacing-4);
+    margin-block: var(--spacing-4);
+    border: 1px solid var(--outline-variant);
+    border-radius: var(--radius-large);
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    --state-layer-bg: var(--on-surface);
+    transition: border-color var(--tr-duration-short) var(--tr-easing-linear);
+}
+
+.blog-entry:where(:hover, :focus-visible) { border-color: var(--outline); }
+
+
+
+/* Additional styling for blog entry content */
+.blog-entry h3,
+.blog-entry p,
+.blog-entry .author {
+    color: var(--on-surface-variant);
+    margin-block: var(--spacing-4);
+    text-wrap: balance;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+}
+
+.delete-button {
+    position: relative;
+}
+
+.delete-button .icon-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-block: 1px;
+    padding-inline: 6px;
+}
+
+.blog-entry .icon-btn {
+    opacity: 0;
+    transition: opacity var(--tr-duration-short) var(--tr-easing-linear);
+}
+  
+.blog-entry:where(:hover, :focus-visible) .icon-btn {
+    opacity: 1;
+}
+
+
+
+
+.btn.text {
+    color: var(--primary);
+    --state-layer-bg: var(--primary);
+    padding-inline: var(--spacing-4);
+  }
+  
+.btn.text:disabled { color: var(--on-surface); }
+  
+.btn.text:disabled .text-label-large { opacity: 0.38; }
+  
+.btn.fill {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    --state-layer-bg: var(--on-primary);
+    padding-inline: var(--spacing-6);
+    transition: box-shadow var(--tr-duration-short) var(--tr-easing-linear);
+}
+  
+.btn.fill:hover:not(:focus) { box-shadow: var(--shadow-1); }
+  
+
+
+
+
+
