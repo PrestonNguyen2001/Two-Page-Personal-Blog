@@ -51,3 +51,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const backButton = document.querySelector('[data-up-btn]');
+
+    // Add click event listener to the button
+    backButton.addEventListener('click', function() {
+        // Scroll to the top of the page smoothly
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+});
