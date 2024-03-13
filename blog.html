@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="assets/css/blog.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <script src="assets/js/form.js"></script>
+    <script src="assets/js/logic.js"></script>
+    <script src="assets/js/blog.js"></script>
+
+        
+</head>
+
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <a href="/">
+                <img src="assets/images/logo-light.svg" alt="Notekeeper" class="logo-light">
+                <img src="assets/images/logo-dark.svg" alt="Notekeeper" class="logo-dark">
+            </a>
+        </div>
+    
+        <button class="theme-btn icon-btn large" aria-label="Toggle theme" data-theme-btn>
+            <span class="material-symbols-rounded dark-icon" aria-hidden="true">dark_mode</span>
+            <span class="material-symbols-rounded light-icon" aria-hidden="true">light_mode</span>
+            <div class="state-layer"></div>
+        </button>
+
+        <button class="back-btn icon-btn large" aria-label="Back Button" data-back-btn>
+            <span class="material-symbols-rounded">arrow_back</span>
+            <div class="state-layer"></div>
+        </button>
+
+    </header>
+
+    <main>
+        <div class="blogs">
+            <div id="blog-list">
+                <!-- Blog posts will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- <a href="developer_portfolio.html">Developer's Portfolio</a> -->
+    </footer>
+
+</body>
+
+</html>
