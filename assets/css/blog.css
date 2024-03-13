@@ -2,6 +2,22 @@ main {
     margin-top: 20px;
 }
 
+/* #back {
+    position: absolute;
+    display: inline;
+    margin-right: 20px;
+    right: 50px;
+    font-size: 2rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+}
+
+#back:hover {
+    color: var(--bg-color);
+} */
+
 .blogs {
     position: relative;
 }
@@ -57,8 +73,48 @@ main {
     opacity: 1;
 }
 
+/**
+ * Modal
+ */
+
+ /* Style for the modal */
+ .modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 560px;
+    width: calc(100% - var(--spacing-8));
+    background-color: var(--surface-container-highest);
+    border-radius: var(--radius-large);
+    padding: var(--spacing-6);
+    box-shadow: var(--shadow-3);
+    z-index: 8;
+    animation: modal-open var(--tr-duration-medium) var(--tr-easing-emphasized) forwards;
+  }
 
 
+
+@keyframes modal-open {
+    0% {
+      transform: translate(-50%, calc(-50% + var(--spacing-5)));
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+
+.modal .icon-btn {
+    position: absolute;
+    top: var(--spacing-4);
+    right: var(--spacing-4);
+}
 
 .btn.text {
     color: var(--primary);
@@ -81,6 +137,53 @@ main {
 .btn.fill:hover:not(:focus) { box-shadow: var(--shadow-1); }
   
 
+/* Modal content */
+.modal-content {
+    background-color: var(--surface-container-highest);
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 5px;
+}
+
+.modal-content textarea {
+    min-height: 240px;
+    max-height: calc(100vh - 200px);
+    color: var(--on-surface-variant);
+    overflow-y: auto;
+    margin-block-end: var(--spacing-4);
+    font-size: var(--fs-body-large);
+    line-height: var(--lh-body-large);
+    font-weight: var(--fw-regular);
+    letter-spacing: var(--ls-p-025);
+}
+
+.modal-content input[type="text"] {
+    padding-left: 0;
+    max-height: 48px;
+    color: var(--on-surface-variant);
+    overflow-y: auto;
+    margin-block-end: var(--spacing-4);
+    font-size: var(--fs-body-large);
+    line-height: var(--lh-body-large);
+    font-weight: var(--fw-regular);
+    letter-spacing: var(--ls-p-025);
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding-block-start: var(--spacing-2);
+  }
+  
+.modal-footer .time {
+    flex-grow: 1;
+    color: var(--on-surface-variant);
+}
 
 
 
