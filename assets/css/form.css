@@ -1,0 +1,119 @@
+
+form {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    min-width: 500px;
+    box-sizing: border-box;
+    padding: 30px 25px;
+    background-color: var(--on-background);
+    border: 3px solid var(--on-surface);
+    border-radius: 40px;
+    margin: 30px 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.btn-box .btn {
+    margin-top: 35px;
+    background-color: var(--on-background);
+    border: 2px solid var(--surface-container-highest);
+    line-height: 0;
+    font-size: 17px;
+    font-weight: 600;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    border-radius: 60px;
+    color: var(--surface-container-highest);
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    position: relative;
+    z-index: 1;
+    transition: all 0.25s cubic-bezier(.53,.01,.35,1.5);
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
+}
+
+
+.btn-box .btn:hover,
+.btn-box .btn:focus {
+    color: var(--on-background);
+    background-color: var(--surface-container-highest);
+}
+
+
+.question {
+    position: relative;
+    padding: 10px 0;
+}
+
+.question:first-of-type {
+    padding-top: 0;
+}
+
+.question:last-of-type {
+    padding-bottom: 0;
+}
+
+.question label {
+    transform-origin: left center;
+    color: var(--surface-container-highest);
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    font-size: 17px;
+    font-weight: 400;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    display: block;
+    position: absolute;
+    margin-top: -40px;
+    z-index: 2;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(.53,.01,.35,1.5);
+}
+
+.question input[type="text"] {
+    appearance: none;
+    background-color: none;
+    border: 2px solid var(--surface-container-highest);
+    line-height: 0;
+    font-size: 17px;
+    font-weight: 600;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-radius: 60px;
+    color: var(--surface-container-highest);
+    font-weight: 100;
+    letter-spacing: 0.01em;
+    position: relative;
+    z-index: 1;
+    transition: all 0.25s cubic-bezier(.53,.01,.35,1.5);
+}
+
+
+.question input[type="text"]:focus {
+    outline: none;
+    background: var(--surface-container-highest);
+    color: var(--on-background);
+    margin-top: 30px;
+}
+
+
+.question input[type="text"]:valid {
+    margin-top: 30px;
+}
+
+.question input[type="text"]:focus ~ label {
+    transform: translate(0, -35px);
+}
+
+.question input[type="text"]:valid ~ label {
+    text-transform: uppercase;
+    font-style: italic;
+    transform: translate(5px, -35px) scale(0.6);
+}
