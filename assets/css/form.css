@@ -6,8 +6,8 @@ form {
     min-width: 500px;
     box-sizing: border-box;
     padding: 30px 25px;
-    background-color: var(--on-background);
-    border: 3px solid var(--on-surface);
+    background-color: var(--second--bg);
+    border: 3px solid var(--second-surface);
     border-radius: 40px;
     margin: 30px 0;
     top: 50%;
@@ -17,8 +17,8 @@ form {
 
 .btn-box .btn {
     margin-top: 35px;
-    background-color: var(--on-background);
-    border: 2px solid var(--surface-container-highest);
+    background-color: var(--second--bg);
+    border: 2px solid var(---surface-container);
     line-height: 0;
     font-size: 17px;
     font-weight: 600;
@@ -26,7 +26,7 @@ form {
     box-sizing: border-box;
     padding: 20px 15px;
     border-radius: 60px;
-    color: var(--surface-container-highest);
+    color: var(---surface-container);
     font-weight: 100;
     letter-spacing: 0.01em;
     position: relative;
@@ -40,8 +40,8 @@ form {
 
 .btn-box .btn:hover,
 .btn-box .btn:focus {
-    color: var(--on-background);
-    background-color: var(--surface-container-highest);
+    color: var(--second--bg);
+    background-color: var(---surface-container);
 }
 
 
@@ -60,7 +60,7 @@ form {
 
 .question label {
     transform-origin: left center;
-    color: var(--surface-container-highest);
+    color: var(---surface-container);
     font-weight: 100;
     letter-spacing: 0.01em;
     font-size: 17px;
@@ -78,7 +78,7 @@ form {
 .question input[type="text"] {
     appearance: none;
     background-color: none;
-    border: 2px solid var(--surface-container-highest);
+    border: 2px solid var(---surface-container);
     line-height: 0;
     font-size: 17px;
     font-weight: 600;
@@ -87,7 +87,7 @@ form {
     box-sizing: border-box;
     padding: 10px 15px;
     border-radius: 60px;
-    color: var(--surface-container-highest);
+    color: var(---surface-container);
     font-weight: 100;
     letter-spacing: 0.01em;
     position: relative;
@@ -98,8 +98,8 @@ form {
 
 .question input[type="text"]:focus {
     outline: none;
-    background: var(--surface-container-highest);
-    color: var(--on-background);
+    background: var(---surface-container);
+    color: var(--second--bg);
     margin-top: 30px;
 }
 
